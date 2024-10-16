@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-10-24</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+    <details>
+        <summary>
+                1.To print the sum of uniques numbers in the array
+            </summary>
+        <pre>
+            num = prompt("").split(" ");
+            emp = [], uni = [], dup = [];
+            for (i of num) {
+                if (!emp.includes(i)) {
+                    emp.push(i)
+                }
+            }
+            for (i of emp) {
+                c = 0;
+                for (j of num) {
+                    if (i == j) {
+                        c++;
+                    }
+                }
+                if (c == 1)
+                    uni.push(i);
+            }
+            uSum = 0
+            for (u of uni) {
+                uSum += +u;
+            }
+            console.log(uSum);
+        </pre>
+    </details><br><br>
+    <details>
+        <summary>
+            2.To check whether uni sum is more or dup sum is more
+            </summary>
+        <pre>
+            num = prompt().split(" ");
+            emp = [], uni = [], dup = [];
+            for (i of num) {
+                if (!emp.includes(i)) {
+                    emp.push(i)
+                }
+            }
+            for (i of emp) {
+                c = 0;
+                for (j of num) {
+                    if (i == j) {
+                        c++;
+                    }
+                }
+                if (c > 1)
+                    dup.push(i);
+                else if (c == 1)
+                    uni.push(i);
+            }
+            uSum = 0, dSum = 0;
+            for (u of uni) {
+                uSum += +u;
+            }
+            for (d of dup) {
+                dSum += +d;
+            }
+            (uSum > dSum) ? console.log("Uniques sum is more") :
+            (dSum > uSum) ? console.log("Duplicates sum is more") :
+                            console.log("Both sum are same");
+        </pre>
+    </details><br><br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div class="carousel slide" data-bs-ride="carousel" id="banners">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#banners" data-bs-slide-to="0" class="active" style="width: 5px; height: 5px; border-radius:100%; background-color:aqua;"></button>
+            <button type="button" data-bs-target="#banners" data-bs-slide-to="1" style="width: 5px; height: 5px; border-radius:100%; background-color:aqua;"></button>
+        </div>
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <img src="./1.png" alt="" class=" d-block w-100">
+            </div>
+            <div class="carousel-item ">
+                <img src="./2.png" alt="" class=" d-block w-100">
+            </div>
+            
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#banners" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#banners" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</body>
+</html>
